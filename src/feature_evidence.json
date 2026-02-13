@@ -1,0 +1,164 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-4-page-valentine-s-day-themed-website-with-consistent-romantic-styling-colors-typography-layout-across-all-pages",
+      "featureTitle": "Create a 4-page Valentine’s Day themed website with consistent romantic styling (colors, typography, layout) across all pages.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-page-1-landing-page-with-the-exact-long-message-provided-by-the-user-and-display-the-1st-and-4th-uploaded-images-img-20260123-022920-162-jpg-and-img-20260123-022853-008-jpg",
+      "featureTitle": "Implement Page 1 (landing page) with the exact long message provided by the user and display the 1st and 4th uploaded images: IMG_20260123_022920_162.jpg and IMG_20260123_022853_008.jpg.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/Page1Landing.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-page-2-with-the-heading-text-exactly-some-of-the-countless-memories-that-we-had-in-the-last-8-months-and-show-a-gallery-of-additional-uploaded-photos-excluding-the-two-used-on-page-1-and-excluding-the-photos-reserved-for-page-4-use-these-images-on-page-2-img-20260110-001106-333-jpg-img-20260123-022956-194-jpg-img-20260123-022822-917-jpg-img-20260123-023006-342-jpg",
+      "featureTitle": "Implement Page 2 with the heading text exactly: \"some of the countless memories that we had in the last 8 months\" and show a gallery of additional uploaded photos (excluding the two used on Page 1 and excluding the photos reserved for Page 4). Use these images on Page 2: IMG_20260110_001106_333.jpg, IMG_20260123_022956_194.jpg, IMG_20260123_022822_917.jpg, IMG_20260123_023006_342.jpg.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/PhotoGallery.tsx",
+        "frontend/src/pages/Page2Memories.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-page-3-with-a-flower-photo-and-the-text-exactly-i-will-always-have-all-the-gift-that-u-gave-mee-in-my-heart-use-a-generated-flower-image-asset-see-image-requirements-for-the-flower-photo",
+      "featureTitle": "Implement Page 3 with a flower photo and the text exactly: \" I will always have all the gift that u gave Mee in my heart \". Use a generated flower image asset (see Image Requirements) for the flower photo.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/Page3Flowers.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-page-4-as-a-gallery-containing-the-remaining-uploaded-photos-all-uploaded-images-not-shown-on-pages-1-and-2-img-20260123-022914-736-jpg-img-20260123-022814-325-jpg-img-20260123-022756-879-jpg-img-20260118-135409-239-jpg-img-20260123-022932-300-jpg",
+      "featureTitle": "Implement Page 4 as a gallery containing the remaining uploaded photos (all uploaded images not shown on Pages 1 and 2): IMG_20260123_022914_736.jpg, IMG_20260123_022814_325.jpg, IMG_20260123_022756_879.jpg, IMG_20260118_135409_239.jpg, IMG_20260123_022932_300.jpg.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/Page4Gallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-simple-navigation-between-the-4-pages-e-g-top-nav-and-or-next-previous-buttons-so-the-site-can-be-viewed-sequentially-on-mobile-and-desktop",
+      "featureTitle": "Add simple navigation between the 4 pages (e.g., top nav and/or next/previous buttons) so the site can be viewed sequentially on mobile and desktop.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SequentialPager.tsx",
+        "frontend/src/components/SiteLayout.tsx",
+        "frontend/src/components/SiteNav.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-all-uploaded-images-to-the-frontend-as-static-assets-and-reference-them-by-filename-in-the-pages-specified-above-do-not-serve-images-through-the-backend",
+      "featureTitle": "Add all uploaded images to the frontend as static assets and reference them by filename in the pages specified above (do not serve images through the backend).",
+      "files": [
+        "frontend/src/pages/Page1Landing.tsx",
+        "frontend/src/pages/Page2Memories.tsx",
+        "frontend/src/pages/Page4Gallery.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-render-the-generated-images-listed-in-image-requirements-from-frontend-static-assets-frontend-public-assets-generated-and-use-them-in-the-ui-background-fallback-visuals-consistently-with-the-theme",
+      "featureTitle": "Render the generated images listed in Image Requirements from frontend static assets (frontend/public/assets/generated) and use them in the UI (background/fallback visuals) consistently with the theme.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/index.css",
+        "frontend/src/pages/Page3Flowers.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

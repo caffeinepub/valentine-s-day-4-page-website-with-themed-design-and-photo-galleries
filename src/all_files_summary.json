@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no functionality.",
+  "feature_evidence.json": "Feature evidence report mapping features to involved files, components, and test IDs.",
+  "frontend-file-summaries.txt": "Prewritten summaries of all frontend files describing their purpose and behavior.",
+  "frontend/index.css": "Tailwind base styles and extensive OKLCH color variables defining the Valentine's theme for light and dark modes.",
+  "frontend/index.html": "HTML entry point loading the React app with a themed title and heart favicon.",
+  "frontend/src/App.tsx": "Sets up TanStack Router with four routes under a shared layout.",
+  "frontend/src/components/PhotoGallery.tsx": "Reusable grid gallery with dialog-based lightbox for full-size image viewing.",
+  "frontend/src/components/SequentialPager.tsx": "Bottom pager enabling previous/next navigation and direct page selection across four routes.",
+  "frontend/src/components/SiteLayout.tsx": "Shared layout providing header, footer, and sequencing controls around routed page content.",
+  "frontend/src/components/SiteNav.tsx": "Top navigation bar with themed icons and active-route highlighting.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and manages an authenticated or anonymous IC actor, refetching on identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Internet Identity auth context and provider handling login, stored identity restoration, and status tracking.",
+  "frontend/src/index.css": "Defines Tailwind layers, custom color variables, fonts, and a repeating background image plus animation delay utilities.",
+  "frontend/src/main.tsx": "Bootstraps the React app, wrapping it with React Query and Internet Identity providers.",
+  "frontend/src/pages/Page1Landing.tsx": "Landing page showing animated hearts, a long romantic message, and two featured photos.",
+  "frontend/src/pages/Page2Memories.tsx": "Memories page displaying a heading and a photo gallery of four selected images.",
+  "frontend/src/pages/Page3Flowers.tsx": "Page showing a flowers image and a short sentimental message inside styled cards.",
+  "frontend/src/pages/Page4Gallery.tsx": "Gallery page listing the remaining uploaded photos using the PhotoGallery component.",
+  "frontend/tailwind.config.js": "Tailwind configuration enabling custom colors, fonts, container settings, and animation plugins.",
+  "project_state.json": "Project metadata describing the Valentine’s site, features, requirements, and image assets."
+}

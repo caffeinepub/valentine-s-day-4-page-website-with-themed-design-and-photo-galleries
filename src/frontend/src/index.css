@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        --background: 0.99 0.01 15;
+        --foreground: 0.25 0.02 15;
+        --card: 1 0.005 15;
+        --card-foreground: 0.25 0.02 15;
+        --popover: 1 0.005 15;
+        --popover-foreground: 0.25 0.02 15;
+        --primary: 0.55 0.18 15;
+        --primary-foreground: 0.99 0.01 15;
+        --secondary: 0.96 0.02 15;
+        --secondary-foreground: 0.35 0.02 15;
+        --muted: 0.96 0.02 15;
+        --muted-foreground: 0.55 0.02 15;
+        --accent: 0.94 0.03 15;
+        --accent-foreground: 0.35 0.02 15;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.92 0.02 15;
+        --input: 0.92 0.02 15;
+        --ring: 0.55 0.18 15;
+        --chart-1: 0.646 0.222 15;
+        --chart-2: 0.6 0.118 340;
+        --chart-3: 0.7 0.15 25;
+        --chart-4: 0.828 0.189 350;
+        --chart-5: 0.769 0.188 10;
+    }
+
+    .dark {
+        --background: 0.15 0.02 15;
+        --foreground: 0.98 0.01 15;
+        --card: 0.20 0.02 15;
+        --card-foreground: 0.98 0.01 15;
+        --popover: 0.18 0.02 15;
+        --popover-foreground: 0.98 0.01 15;
+        --primary: 0.65 0.16 15;
+        --primary-foreground: 0.15 0.02 15;
+        --secondary: 0.25 0.02 15;
+        --secondary-foreground: 0.98 0.01 15;
+        --muted: 0.25 0.02 15;
+        --muted-foreground: 0.70 0.02 15;
+        --accent: 0.30 0.03 15;
+        --accent-foreground: 0.98 0.01 15;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.98 0.01 15;
+        --border: 0.30 0.02 15;
+        --input: 0.30 0.02 15;
+        --ring: 0.60 0.15 15;
+        --chart-1: 0.65 0.20 15;
+        --chart-2: 0.70 0.15 340;
+        --chart-3: 0.75 0.12 25;
+        --chart-4: 0.80 0.18 350;
+        --chart-5: 0.70 0.16 10;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Lora', serif;
+        background-image: url('/assets/generated/valentine-bg.dim_1920x1080.png');
+        background-size: 400px 400px;
+        background-repeat: repeat;
+        background-attachment: fixed;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+}
+
+@layer utilities {
+    .delay-100 {
+        animation-delay: 100ms;
+    }
+    .delay-200 {
+        animation-delay: 200ms;
+    }
+}
