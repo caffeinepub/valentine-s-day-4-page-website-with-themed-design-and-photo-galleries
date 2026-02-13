@@ -1,151 +1,95 @@
 {
   "kind": "build_request",
-  "title": "Valentine’s Day 4-page website with themed design and photo galleries",
+  "title": "Add a new final page with “this is where it all started” and include newly uploaded images as static assets",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Create a 4-page Valentine’s Day themed website with consistent romantic styling (colors, typography, layout) across all pages.",
+      "id": "REQ-11",
+      "text": "Add a new final (last) route/page to the site and display the text exactly: \"this is where it all started\".",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "I want to make a valentines day website with multiple pages and the color must be theamed accordingly"
+          "And now add one more page at the last and say  \" this is where it all started\""
         ]
       },
       "acceptanceCriteria": [
-        "Site has 4 distinct pages/routes and a shared layout (header/nav and consistent styling).",
-        "Valentine’s theme uses a coherent palette (e.g., reds/pinks/cream) and consistent typography and spacing across pages."
+        "A new page component exists and is reachable via a new route (after the current /gallery page).",
+        "The page visibly displays the text exactly: \"this is where it all started\" (matching capitalization and spacing inside the quotes).",
+        "The new page inherits the existing Valentine theme styling and layout consistency (header/footer/transition overlay behavior unchanged)."
       ]
     },
     {
-      "id": "REQ-2",
-      "text": "Implement Page 1 (landing page) with the exact long message provided by the user and display the 1st and 4th uploaded images: IMG_20260123_022920_162.jpg and IMG_20260123_022853_008.jpg.",
+      "id": "REQ-12",
+      "text": "Update the router and all navigation controls so the new final page is included in: (1) the top navigation, and (2) the bottom sequential pager order, with the new page being the last step.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "the first page must contain the msg\" I love you sooo much ponnnaaa I am Soo happy that u r a part of my messy life inele nee parenjilleee namoke abbasiya vite poite thiriche verumbol ore home ene feeling ondavum ene enikee ninte kude nine ketii pidikumbol ninte edethe skin to skin contact vane irikumbol athe ahhh thonenee like u r the home the I have the only place I can be angry, sad , happy , cling , romantic , sexual and say what I want I love you soooo muchhh ponnnaaa u r my emotional physical mental and spiritual soul...... Happy Valentines Day ponnnaaa\" and add the first and 4th image"
+          "add one more page at the last"
         ]
       },
       "acceptanceCriteria": [
-        "Page 1 shows the message text exactly as provided (including spelling/casing/punctuation) without truncation.",
-        "Page 1 displays IMG_20260123_022920_162.jpg and IMG_20260123_022853_008.jpg prominently (responsive on mobile and desktop)."
+        "Top navigation includes an entry to the new final page, and clicking it navigates correctly.",
+        "Sequential pager includes the new final page as the last entry; Next from /gallery goes to the new page; Previous from the new page goes back to /gallery.",
+        "The page-to-page transition overlay continues to play when navigating to/from the new final page."
       ]
     },
     {
-      "id": "REQ-3",
-      "text": "Implement Page 2 with the heading text exactly: \"some of the countless memories that we had in the last 8 months\" and show a gallery of additional uploaded photos (excluding the two used on Page 1 and excluding the photos reserved for Page 4). Use these images on Page 2: IMG_20260110_001106_333.jpg, IMG_20260123_022956_194.jpg, IMG_20260123_022822_917.jpg, IMG_20260123_023006_342.jpg.",
+      "id": "REQ-13",
+      "text": "Add the newly uploaded images as frontend static assets under frontend/public/assets/uploads and (at minimum) ensure they can be referenced by filename from the frontend code without using the backend: 1771025953219.png, 1771025927131.png, 1771025946100.png, 1771025953219-1.png, 1771025946100-1.png, 1771025953219-2.png, 1771025946100-2.png, 1771025927131-1.png, 1771025927131-2.png, 1771025145088.png, 1771025145088-1.png.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-4"
         ],
         "quotes": [
-          "in the 2nd page add some more pics and say \"some of the countless memories that we had in the last 8 months \""
+          "The user has uploaded 12 image(s): 1771025953219.png, 1771025927131.png, 1771025946100.png, 1771025953219-1.png, 1771025946100-1.png, 1771025953219-2.png, 1771025946100-2.png, 1771025927131-1.png, 1771025927131-2.png, 1771025145088.png, 1771025145088-1.png, 1771025145088-1.png."
         ]
       },
       "acceptanceCriteria": [
-        "Page 2 displays the exact heading text provided.",
-        "Page 2 shows a responsive gallery/grid containing exactly: IMG_20260110_001106_333.jpg, IMG_20260123_022956_194.jpg, IMG_20260123_022822_917.jpg, IMG_20260123_023006_342.jpg."
+        "All listed PNG files exist in frontend/public/assets/uploads in the built app output (deduplicate the repeated 1771025145088-1.png filename without breaking references).",
+        "The images load successfully in the browser when referenced via /assets/uploads/<filename>.",
+        "No backend endpoints are added/used to serve these images."
       ]
     },
     {
-      "id": "REQ-4",
-      "text": "Implement Page 3 with a flower photo and the text exactly: \" I will always have all the gift that u gave Mee in my heart \". Use a generated flower image asset (see Image Requirements) for the flower photo.",
+      "id": "REQ-14",
+      "text": "On the new final page, include a simple responsive gallery (or equivalent visual presentation) that displays the newly uploaded PNG images so the user can confirm the pictures are visible.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-3",
+          "msg-4"
         ],
         "quotes": [
-          "in the 3 page give a photo of the flowers and say \" I will always have all the gift that u gave Mee in my heart \""
+          "R the pics visible??",
+          "And now add one more page at the last and say  \" this is where it all started\""
         ]
       },
       "acceptanceCriteria": [
-        "Page 3 displays the exact sentence provided (including spacing and 'Mee').",
-        "Page 3 displays the generated flower image asset as the main visual (responsive)."
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "text": "Implement Page 4 as a gallery containing the remaining uploaded photos (all uploaded images not shown on Pages 1 and 2): IMG_20260123_022914_736.jpg, IMG_20260123_022814_325.jpg, IMG_20260123_022756_879.jpg, IMG_20260118_135409_239.jpg, IMG_20260123_022932_300.jpg.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "and the 4th page add the rest of the photos"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Page 4 shows a responsive gallery/grid containing exactly: IMG_20260123_022914_736.jpg, IMG_20260123_022814_325.jpg, IMG_20260123_022756_879.jpg, IMG_20260118_135409_239.jpg, IMG_20260123_022932_300.jpg."
-      ]
-    },
-    {
-      "id": "REQ-6",
-      "text": "Add simple navigation between the 4 pages (e.g., top nav and/or next/previous buttons) so the site can be viewed sequentially on mobile and desktop.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ]
-      },
-      "acceptanceCriteria": [
-        "User can navigate to all 4 pages via visible UI controls without manually editing the URL.",
-        "Navigation highlights the current page or otherwise indicates where the user is in the sequence."
-      ]
-    },
-    {
-      "id": "REQ-7",
-      "text": "Add all uploaded images to the frontend as static assets and reference them by filename in the pages specified above (do not serve images through the backend).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ]
-      },
-      "acceptanceCriteria": [
-        "All 11 uploaded images are included as frontend static assets and load correctly in the browser.",
-        "No backend calls are required to fetch or render the images."
-      ]
-    },
-    {
-      "id": "REQ-8",
-      "text": "Render the generated images listed in Image Requirements from frontend static assets (frontend/public/assets/generated) and use them in the UI (background/fallback visuals) consistently with the theme.",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Generated images exist under frontend/public/assets/generated and are referenced directly by the frontend.",
-        "Flower image is used on Page 3; background and favicon are applied site-wide where appropriate."
+        "The new final page renders a gallery/grid of the newly uploaded PNG images using their /assets/uploads/<filename> paths.",
+        "Images are viewable on mobile and desktop without layout overflow.",
+        "At least one interaction path (e.g., click to enlarge if using existing lightbox) works without errors."
       ]
     }
   ],
   "constraints": [
-    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
-    "Backend must remain a single Motoko actor (no additional backend services).",
-    "Use English for any user-facing text in this build request; preserve the user-provided page copy exactly where specified for the website content."
+    "Frontend immutable paths (frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui) must not be edited.",
+    "Keep backend as a single Motoko actor; do not add backend image serving.",
+    "Use English for any user-facing text in the build request and ensure the displayed page text matches exactly: \"this is where it all started\"."
   ],
   "nonGoals": [
-    "User authentication (Internet Identity) and any login flow.",
-    "Persisting data on the backend or uploading images at runtime.",
-    "Integrations with external APIs or third-party services."
+    "Do not change the existing Page 1–4 messages, image assignments, or galleries except as needed to include navigation to the new final page.",
+    "Do not implement sound effects for transitions (not requested).",
+    "Do not add authentication or any new backend features for this change."
   ],
   "imageRequirements": {
-    "required": [
-      "Soft repeating heart pattern background in blush/rose tones (valentine-bg.dim_1920x1080.png)",
-      "Romantic bouquet of flowers photo-style image, warm lighting, shallow depth of field (flowers.dim_1200x800.png)",
-      "Simple heart icon favicon, flat design, red/rose palette (favicon-heart.dim_64x64.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

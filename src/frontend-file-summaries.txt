@@ -1,14 +1,17 @@
 {
-  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with 4 routes (landing, memories, flowers, gallery) wrapped in a shared layout component.",
-  "frontend/src/components/SiteLayout.tsx": "Shared layout wrapper that provides consistent header with navigation, main content area with Outlet for route rendering, sequential pager, and footer with attribution across all pages.",
-  "frontend/src/components/SiteNav.tsx": "Top navigation component with icon buttons for all 4 pages, highlighting the current active page with rose-themed styling.",
-  "frontend/src/components/SequentialPager.tsx": "Fixed bottom navigation with previous/next buttons and page indicator dots for sequential browsing through the 4 pages.",
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with 5 routes (landing, memories, flowers, gallery, beginning) wrapped in a shared layout component.",
+  "frontend/src/components/SiteLayout.tsx": "Shared layout wrapper with header, navigation, footer, and integrated route transition overlay that triggers on pathname changes across all pages.",
+  "frontend/src/components/SiteNav.tsx": "Top navigation component with icon buttons for all 5 pages, highlighting the current active page with rose-themed styling.",
+  "frontend/src/components/SequentialPager.tsx": "Fixed bottom navigation with previous/next buttons and page indicator dots for sequential browsing through the 5 pages.",
   "frontend/src/pages/Page1Landing.tsx": "Landing page displaying the heartfelt Valentine's message exactly as provided and showcasing the first and fourth uploaded images in a responsive grid.",
   "frontend/src/pages/Page2Memories.tsx": "Memories page with heading \"some of the countless memories that we had in the last 8 months\" and a photo gallery of 4 specified images.",
   "frontend/src/pages/Page3Flowers.tsx": "Gifts page displaying the generated flower image and the message \"I will always have all the gift that u gave Mee in my heart\" in an elegant card layout.",
   "frontend/src/pages/Page4Gallery.tsx": "Gallery page showcasing the remaining 5 uploaded photos in a responsive grid layout with lightbox functionality.",
   "frontend/src/components/PhotoGallery.tsx": "Reusable photo gallery component with responsive grid layout and dialog-based lightbox for viewing full-size images on click.",
-  "frontend/src/index.css": "Global styles with Valentine's theme using OKLCH colors (rose/pink palette), Playfair Display and Lora serif fonts, and repeating heart pattern background.",
+  "frontend/src/index.css": "Global styles with Valentine's theme, OKLCH color system, custom fonts, and keyframe animations for the transition overlay particles (veil fade, particle fall, spin, and flutter effects with reduced-motion overrides).",
   "frontend/tailwind.config.js": "Tailwind configuration extended with Valentine's color palette (rose/pink shades in OKLCH), custom serif fonts (Playfair Display, Lora), and romantic design tokens.",
-  "frontend/index.html": "HTML entry point with Valentine's Day title and heart favicon reference."
+  "frontend/index.html": "HTML entry point with Valentine's Day title and heart favicon reference.",
+  "frontend/src/hooks/usePrefersReducedMotion.ts": "React hook that detects and reactively tracks the user's prefers-reduced-motion media query preference for accessibility.",
+  "frontend/src/components/RouteTransitionOverlay.tsx": "Full-screen overlay component that renders 25 animated heart and butterfly particles during page transitions, with reduced-motion support and automatic completion callback.",
+  "frontend/src/pages/Page5Final.tsx": "New final page component displaying the text \"this is where it all started\" as the heading and showcasing 4 comic-style images in a responsive gallery with lightbox functionality."
 }

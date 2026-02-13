@@ -2,7 +2,7 @@ import { useRouterState, useNavigate } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const pages = ['/', '/memories', '/flowers', '/gallery'];
+const pages = ['/', '/memories', '/flowers', '/gallery', '/beginning'];
 
 export default function SequentialPager() {
   const navigate = useNavigate();

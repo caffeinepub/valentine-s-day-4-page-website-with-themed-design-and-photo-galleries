@@ -1,12 +1,13 @@
 import { useRouterState, useNavigate } from '@tanstack/react-router';
 import { Button } from '@/components/ui/button';
-import { Heart, Image, Flower2, Images } from 'lucide-react';
+import { Heart, Image, Flower2, Images, Sparkles } from 'lucide-react';
 
 const navItems = [
   { path: '/', label: 'Home', icon: Heart },
   { path: '/memories', label: 'Memories', icon: Image },
   { path: '/flowers', label: 'Gifts', icon: Flower2 },
   { path: '/gallery', label: 'Gallery', icon: Images },
+  { path: '/beginning', label: 'Beginning', icon: Sparkles },
 ];
 
 export default function SiteNav() {

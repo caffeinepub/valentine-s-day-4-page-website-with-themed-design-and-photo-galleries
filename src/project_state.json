@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
-  "summary": "Valentine’s Day themed multi-page website with romantic messages and photo galleries across 4 pages.",
+  "projectStateVersion": 7,
+  "summary": "Valentine’s Day themed multi-page website with romantic messages and photo galleries across 5 pages (new final page: \"this is where it all started\").",
   "architectural_notes": [
-    "Website will have 4 pages with Valentine’s Day themed color scheme and text/photo content per page."
+    "Website will have 5 pages with Valentine’s Day themed color scheme and text/photo content per page.",
+    "Implement animated page transition overlay (butterflies + hearts) triggered on navigation between the 5 pages."
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Soft repeating heart pattern background in blush/rose tones (valentine-bg.dim_1920x1080.png)\n- Romantic bouquet of flowers photo-style image, warm lighting, shallow depth of field (flowers.dim_1200x800.png)\n- Simple heart icon favicon, flat design, red/rose palette (favicon-heart.dim_64x64.png)",
   "existing_features": [
     {
       "id": "feature-create-a-4-page-valentine-s-day-themed-website-with-consistent-romantic-styling-colors-typography-layout-across-all-pages",
@@ -72,6 +72,46 @@
         "REQ-8"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-a-page-to-page-transition-animation-that-plays-on-every-navigation-between-the-4-routes-via-the-top-nav-and-the-bottom-sequential-pager-the-transition-must-display-a-full-screen-overlay-filled-with-animated-hearts-and-butterflies-then-reveal-the-destination-page-after-the-animation-completes",
+      "title": "Add a page-to-page transition animation that plays on every navigation between the 4 routes (via the top nav and the bottom sequential pager). The transition must display a full-screen overlay filled with animated hearts and butterflies, then reveal the destination page after the animation completes.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-transition-overlay-in-a-reusable-way-within-the-shared-routed-layout-so-it-applies-consistently-across-all-pages-without-duplicating-logic-in-each-page-component",
+      "title": "Implement the transition overlay in a reusable way within the shared routed layout so it applies consistently across all pages without duplicating logic in each page component.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-final-last-route-page-to-the-site-and-display-the-text-exactly-this-is-where-it-all-started",
+      "title": "Add a new final (last) route/page to the site and display the text exactly: \"this is where it all started\".",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-router-and-all-navigation-controls-so-the-new-final-page-is-included-in-1-the-top-navigation-and-2-the-bottom-sequential-pager-order-with-the-new-page-being-the-last-step",
+      "title": "Update the router and all navigation controls so the new final page is included in: (1) the top navigation, and (2) the bottom sequential pager order, with the new page being the last step.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-on-the-new-final-page-include-a-simple-responsive-gallery-or-equivalent-visual-presentation-that-displays-the-newly-uploaded-png-images-so-the-user-can-confirm-the-pictures-are-visible",
+      "title": "On the new final page, include a simple responsive gallery (or equivalent visual presentation) that displays the newly uploaded PNG images so the user can confirm the pictures are visible.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -79,6 +119,26 @@
       "id": "AR-1",
       "summary": "Create a Valentine’s Day themed multi-page website (4 pages) with specified messages and photo placement per page.",
       "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add page-to-page transition animation showing a full-screen overlay filled with butterflies and hearts when navigating between pages.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a new 5th (last) page that displays the text exactly: \"this is where it all started\".",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add the newly uploaded images as frontend static assets under frontend/public/assets/uploads and (at minimum) ensure they can be referenced by filename from the frontend code without using the backend: 1771025953219.png, 1771025927131.png, 1771025946100.png, 1771025953219-1.png, 1771025946100-1.png, 1771025953219-2.png, 1771025946100-2.png, 1771025927131-1.png, 1771025927131-2.png, 1771025145088.png, 1771025145088-1.png.",
+      "reqIds": [
+        "REQ-13"
+      ],
       "status": "pending"
     }
   ],

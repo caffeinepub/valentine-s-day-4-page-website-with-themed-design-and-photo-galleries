@@ -86,3 +86,123 @@
         animation-delay: 200ms;
     }
 }
+
+@layer components {
+    /* Transition overlay animations */
+    .transition-overlay {
+        animation: overlay-appear 0.3s ease-out;
+    }
+
+    @keyframes overlay-appear {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes veil-fade {
+        0% {
+            opacity: 0;
+        }
+        15% {
+            opacity: 1;
+        }
+        85% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes particle-fall {
+        0% {
+            transform: translateY(0) translateX(0);
+            opacity: 0;
+        }
+        10% {
+            opacity: 1;
+        }
+        90% {
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(110vh) translateX(calc(var(--drift, 0) * 50px));
+            opacity: 0;
+        }
+    }
+
+    @keyframes particle-spin {
+        0%, 100% {
+            transform: rotate(0deg) scale(1);
+        }
+        25% {
+            transform: rotate(10deg) scale(1.1);
+        }
+        50% {
+            transform: rotate(-10deg) scale(0.9);
+        }
+        75% {
+            transform: rotate(5deg) scale(1.05);
+        }
+    }
+
+    @keyframes particle-flutter {
+        0%, 100% {
+            transform: rotate(0deg) translateX(0);
+        }
+        25% {
+            transform: rotate(-15deg) translateX(-10px);
+        }
+        50% {
+            transform: rotate(0deg) translateX(0);
+        }
+        75% {
+            transform: rotate(15deg) translateX(10px);
+        }
+    }
+
+    .animate-veil {
+        animation: veil-fade 2.5s ease-in-out;
+    }
+
+    .animate-particle-fall {
+        animation: particle-fall 3s ease-in forwards;
+        --drift: calc(sin(var(--particle-id, 0)) * 2);
+    }
+
+    .animate-particle-spin {
+        animation: particle-spin 2s ease-in-out infinite;
+    }
+
+    .animate-particle-flutter {
+        animation: particle-flutter 1.5s ease-in-out infinite;
+    }
+
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        .transition-overlay {
+            animation: none;
+        }
+
+        .animate-veil {
+            animation: none;
+            opacity: 0.8;
+        }
+
+        .animate-particle-fall {
+            animation: none;
+            opacity: 0;
+        }
+
+        .animate-particle-spin {
+            animation: none;
+        }
+
+        .animate-particle-flutter {
+            animation: none;
+        }
+    }
+}

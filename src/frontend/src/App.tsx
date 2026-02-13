@@ -4,6 +4,7 @@ import Page1Landing from './pages/Page1Landing';
 import Page2Memories from './pages/Page2Memories';
 import Page3Flowers from './pages/Page3Flowers';
 import Page4Gallery from './pages/Page4Gallery';
+import Page5Final from './pages/Page5Final';
 
 const rootRoute = createRootRoute({
   component: SiteLayout,
@@ -33,7 +34,13 @@ const galleryRoute = createRoute({
   component: Page4Gallery,
 });
 
-const routeTree = rootRoute.addChildren([indexRoute, memoriesRoute, flowersRoute, galleryRoute]);
+const finalRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: '/beginning',
+  component: Page5Final,
+});
+
+const routeTree = rootRoute.addChildren([indexRoute, memoriesRoute, flowersRoute, galleryRoute, finalRoute]);
 
 const router = createRouter({ routeTree });
 

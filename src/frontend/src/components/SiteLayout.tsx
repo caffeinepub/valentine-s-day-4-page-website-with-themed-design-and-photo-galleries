@@ -1,9 +1,27 @@
-import { Outlet } from '@tanstack/react-router';
+import { Outlet, useLocation } from '@tanstack/react-router';
+import { useEffect, useState } from 'react';
 import SiteNav from './SiteNav';
 import SequentialPager from './SequentialPager';
+import RouteTransitionOverlay from './RouteTransitionOverlay';
 import { Heart } from 'lucide-react';
 
 export default function SiteLayout() {
+  const location = useLocation();
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [displayPath, setDisplayPath] = useState(location.pathname);
+
+  useEffect(() => {
+    // Trigger transition on route change
+    if (location.pathname !== displayPath) {
+      setIsTransitioning(true);
+    }
+  }, [location.pathname, displayPath]);
+
+  const handleTransitionComplete = () => {
+    setIsTransitioning(false);
+    setDisplayPath(location.pathname);
+  };
+
   const currentYear = new Date().getFullYear();
   const appIdentifier = encodeURIComponent(
     typeof window !== 'undefined' ? window.location.hostname : 'valentine-app'
@@ -43,6 +61,11 @@ export default function SiteLayout() {
           </p>
         </div>
       </footer>
+
+      <RouteTransitionOverlay 
+        isActive={isTransitioning} 
+        onComplete={handleTransitionComplete}
+      />
     </div>
   );
 }
